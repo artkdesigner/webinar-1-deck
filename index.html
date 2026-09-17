@@ -25,6 +25,12 @@
   table{border-collapse:collapse; width:100%}
   th,td{text-align:left; padding:18px 20px; border-bottom:1px solid var(--line)}
   th{border-bottom:2px solid var(--line)}
+  .eyebrow{font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--accent)}
+  .badge{position:absolute; top:128px; right:128px; font-size:22px; font-weight:600; color:var(--muted)}
+  .foot-left{position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF}
+  .foot-right{position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF}
+  .foot-left-dark{position:absolute; left:128px; bottom:64px; font-size:24px; color:var(--dark-line)}
+  .foot-right-dark{position:absolute; right:128px; bottom:64px; font-size:24px; color:var(--dark-line)}
 
   /* nav ui */
   .nav{position:fixed; bottom:24px; left:0; right:0; display:flex; align-items:center; justify-content:center; gap:18px; z-index:10; font-family:'Public Sans', Arial, sans-serif}
@@ -50,248 +56,371 @@
 <div class="stage">
   <div class="canvas" id="canvas">
 
-    <!-- 1. cover -->
+    <!-- 01. cover -->
     <section class="slide active" id="cover" style="background:var(--dark); color:var(--dark-text); padding:128px; justify-content:space-between">
       <div style="display:flex; flex-direction:column; gap:24px">
         <p style="font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:#E07A44">Курс «Figma to code»</p>
         <h1 class="display" style="font-size:120px; font-weight:500; line-height:1.05; color:var(--dark-text)">Вебинар 1</h1>
-        <p style="font-size:32px; color:var(--dark-muted); line-height:1.4">Вайбкодинг с Claude Code: как ИИ собирает сайт из макета Figma</p>
+        <p style="font-size:32px; color:var(--dark-muted); line-height:1.4">Пошаговый алгоритм: как верстать макеты в Claude Code</p>
       </div>
       <p style="font-size:24px; color:var(--dark-line)">Claude Code · Figma MCP · VS Code</p>
     </section>
 
-    <!-- 2. what is claude code -->
-    <section class="slide" id="what-is-claude-code" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
-      <p style="font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--accent)">Что такое Claude Code</p>
-      <h2 class="display" style="font-size:72px; font-weight:500; line-height:1.15">Автономный ИИ-инструмент, который работает прямо с вашими локальными файлами</h2>
-      <p style="font-size:32px; color:var(--muted); line-height:1.4">В отличие от обычного чата, Claude Code действует как полноценный помощник в проекте — выполняет задачи и вносит изменения в файлы, а не просто отвечает на вопросы.</p>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF">02</p>
-      <aside hidden>Главная идея слайда: Claude Code — это не чат-бот, а агент, который сам читает проект и меняет файлы. Это база для всего остального разговора.</aside>
+    <!-- 02. about me -->
+    <section class="slide" id="about-me" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:56px">
+      <p class="eyebrow">Обо мне</p>
+      <div style="display:flex; gap:64px; flex:1; align-items:center">
+        <img src="assets/about-me.jpg" alt="Фото спикера" style="width:420px; height:562px; object-fit:cover; border-radius:24px; flex-shrink:0">
+        <div style="display:flex; flex-direction:column; gap:32px; flex:1">
+          <div style="display:flex; flex-direction:column; gap:8px; padding-bottom:24px; border-bottom:1px solid var(--line)">
+            <p style="font-size:56px; font-weight:600; color:var(--accent)" class="display">9 лет</p>
+            <p style="font-size:26px; color:var(--muted)">в дизайне</p>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; padding-bottom:24px; border-bottom:1px solid var(--line)">
+            <p style="font-size:56px; font-weight:600; color:var(--accent)" class="display">6+ лет</p>
+            <p style="font-size:26px; color:var(--muted)">продуктовый дизайнер в Альфа-Банке</p>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px">
+            <p style="font-size:56px; font-weight:600; color:var(--accent)" class="display">Без кода</p>
+            <p style="font-size:26px; color:var(--muted)">раньше верстал на Webflow и Taptop — теперь верстаю без кода</p>
+          </div>
+        </div>
+      </div>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">02</p>
     </section>
 
-    <!-- 3. how different -->
-    <section class="slide" id="how-different" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:56px">
+    <!-- 03. what you get -->
+    <section class="slide" id="what-you-get" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
+      <p class="eyebrow">На этой лекции</p>
+      <h1 class="display" style="font-size:88px; font-weight:500; line-height:1.15">Что вы получите на этой лекции</h1>
+      <p style="font-size:36px; color:var(--muted); line-height:1.4">Пошаговый алгоритм, как верстать макеты в Claude Code</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">03</p>
+    </section>
+
+    <!-- 04. lecture plan -->
+    <section class="slide" id="lecture-plan" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:48px">
       <div style="display:flex; flex-direction:column; gap:16px">
-        <p style="font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--accent)">Что такое Claude Code</p>
-        <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Главные отличия от обычного чата</h2>
+        <p class="eyebrow">План лекции</p>
+        <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Что мы с вами разберём</h2>
+      </div>
+      <div style="display:flex; flex:1">
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 40px 0 0">
+          <p style="font-size:64px; font-weight:600; color:var(--accent)" class="display">01</p>
+          <h3 style="font-size:28px; font-weight:600; line-height:1.25">Основные шаги</h3>
+        </div>
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 40px; border-left:1px solid var(--line)">
+          <p style="font-size:64px; font-weight:600; color:var(--accent)" class="display">02</p>
+          <h3 style="font-size:28px; font-weight:600; line-height:1.25">Терминологию</h3>
+        </div>
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 40px; border-left:1px solid var(--line)">
+          <p style="font-size:64px; font-weight:600; color:var(--accent)" class="display">03</p>
+          <h3 style="font-size:28px; font-weight:600; line-height:1.25">Как готовить макеты к вёрстке</h3>
+        </div>
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 0 0 40px; border-left:1px solid var(--line)">
+          <p style="font-size:64px; font-weight:600; color:var(--accent)" class="display">04</p>
+          <h3 style="font-size:28px; font-weight:600; line-height:1.25">Как готовить анимацию</h3>
+        </div>
+      </div>
+      <p style="font-size:26px; color:var(--muted); line-height:1.4">По итогу у вас будет полный гайд, как верстать макеты с помощью нейронки</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">04</p>
+    </section>
+
+    <!-- 05. what is claude code -->
+    <section class="slide" id="what-is-claude-code" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
+      <p class="eyebrow">Про Claude Code</p>
+      <h2 class="display" style="font-size:72px; font-weight:500; line-height:1.15">Простыми словами — это программа-ассистент, мозги и руки</h2>
+      <p style="font-size:32px; color:var(--muted); line-height:1.4">Он умеет работать с файлами вашего проекта: редактировать их, создавать, удалять, переносить и многое другое.</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">05</p>
+    </section>
+
+    <!-- 06. why claude code -->
+    <section class="slide" id="why-claude-code" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:48px">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <p class="eyebrow">Про Claude Code</p>
+        <h2 class="display" style="font-size:60px; font-weight:500; line-height:1.15">Почему верстаем в Claude Code</h2>
       </div>
       <div style="display:flex; gap:32px; flex:1">
         <div style="flex:1; display:flex; flex-direction:column; gap:20px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:48px">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
-          <h3 style="font-size:32px; font-weight:600; line-height:1.2">Контекст проекта</h3>
-          <p style="font-size:24px; color:var(--muted); line-height:1.4">Знает структуру всего проекта, а не только то, что скопировано в диалог</p>
+          <h3 style="font-size:32px; font-weight:600; line-height:1.2; color:var(--muted)">Обычный чат</h3>
+          <p style="font-size:25px; color:var(--muted); line-height:1.45">Claude или GPT в чате не способны долго удерживать контекст. Чтобы задать контекст разговора, нужно каждый раз закидывать туда кучу файлов и инструкций.</p>
         </div>
-        <div style="flex:1; display:flex; flex-direction:column; gap:20px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:48px">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M8 13a4 4 0 010-6l2-2a4 4 0 016 6"/><path d="M16 11a4 4 0 010 6l-2 2a4 4 0 01-6-6"/><path d="M9 15l6-6"/></svg>
-          <h3 style="font-size:32px; font-weight:600; line-height:1.2">Интеграция</h3>
-          <p style="font-size:24px; color:var(--muted); line-height:1.4">Подключается к внешним сервисам и базам данных через протокол MCP</p>
-        </div>
-        <div style="flex:1; display:flex; flex-direction:column; gap:20px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:48px">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
-          <h3 style="font-size:32px; font-weight:600; line-height:1.2">Контроль</h3>
-          <p style="font-size:24px; color:var(--muted); line-height:1.4">По умолчанию запрашивает разрешение перед каждой командой или изменением файлов</p>
+        <div style="flex:1; display:flex; flex-direction:column; gap:20px; background:var(--accent-tint); border:1px solid #E5D2BE; border-radius:24px; padding:48px">
+          <h3 style="font-size:32px; font-weight:600; line-height:1.2; color:var(--accent)">Claude Code</h3>
+          <p style="font-size:25px; color:#5A3A28; line-height:1.45">Видит папку вашего проекта, сам читает файлы и понимает контекст. Умеет интегрироваться с сервисами — Figma по MCP, Google Drive и другими.</p>
         </div>
       </div>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF">03</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">06</p>
     </section>
 
-    <!-- 4. need overview -->
-    <section class="slide" id="need-overview" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:56px">
-      <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Что понадобится для вайбкодинга</h2>
+    <!-- 07. subscription step 1 -->
+    <section class="slide" id="subscription-step1" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:48px">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <p class="eyebrow">Шаг 1 · Подписка</p>
+        <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Какая подписка нужна</h2>
+      </div>
+      <div style="display:flex; gap:32px; flex:1">
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:48px; justify-content:center">
+          <p class="display" style="font-size:96px; font-weight:500; color:var(--ink)">$20<span style="color:var(--muted); font-size:.4em"> / мес</span></p>
+          <p style="font-size:26px; color:var(--muted); line-height:1.4">Базовая подписка. Хватает на вёрстку одного сайта в неделю.</p>
+        </div>
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; background:var(--accent-tint); border:1px solid #E5D2BE; border-radius:24px; padding:48px; justify-content:center">
+          <p class="display" style="font-size:96px; font-weight:500; color:var(--accent)">$100<span style="color:#8a6a55; font-size:.4em"> / мес</span></p>
+          <p style="font-size:26px; color:#5A3A28; line-height:1.4">В 20 раз больше токенов — для более глубокой разработки: сервисов и приложений.</p>
+        </div>
+      </div>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">07</p>
+    </section>
+
+    <!-- 08. subscription limits -->
+    <section class="slide" id="subscription-limits" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:40px">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <p class="eyebrow">Шаг 1 · Подписка</p>
+        <h2 class="display" style="font-size:60px; font-weight:500; line-height:1.15">Что из себя представляет подписка</h2>
+      </div>
+      <p style="font-size:28px; color:var(--muted); line-height:1.4">Лимиты токенов, которые обновляются через определённое количество времени:</p>
+      <div style="display:flex; gap:32px; flex:1">
+        <div style="flex:1; display:flex; flex-direction:column; gap:12px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:44px; justify-content:center">
+          <h3 style="font-size:32px; font-weight:600">5-часовой лимит</h3>
+          <p style="font-size:24px; color:var(--muted); line-height:1.4">Определённое количество токенов на 5 часов</p>
+        </div>
+        <div style="flex:1; display:flex; flex-direction:column; gap:12px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:44px; justify-content:center">
+          <h3 style="font-size:32px; font-weight:600">Недельный лимит</h3>
+          <p style="font-size:24px; color:var(--muted); line-height:1.4">Определённое количество токенов на 7 дней</p>
+        </div>
+      </div>
+      <p style="font-size:24px; color:var(--muted); line-height:1.4">Потратили лимит раньше времени — ждёте, пока он обновится. Как грамотно распоряжаться токенами — расскажем на курсе.</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">08</p>
+    </section>
+
+    <!-- 09. setup step 2 -->
+    <section class="slide" id="setup-step2" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:56px">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <p class="eyebrow">Шаг 2 · Рабочая среда</p>
+        <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Настраиваем рабочую среду</h2>
+      </div>
       <div style="display:flex; flex:1">
-        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 40px 0 0">
-          <p style="font-size:64px; font-weight:600; color:var(--accent)">01</p>
-          <h3 style="font-size:30px; font-weight:600; line-height:1.2">Подписка на Claude Code</h3>
-          <p style="font-size:24px; color:var(--muted); line-height:1.4">$20 в месяц — хватает на вёрстку одного сайта в неделю</p>
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 48px 0 0">
+          <p style="font-size:64px; font-weight:600; color:var(--accent)" class="display">01</p>
+          <h3 style="font-size:32px; font-weight:600; line-height:1.25">VS Code</h3>
         </div>
-        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 40px; border-left:1px solid var(--line)">
-          <p style="font-size:64px; font-weight:600; color:var(--accent)">02</p>
-          <h3 style="font-size:30px; font-weight:600; line-height:1.2">Скилл</h3>
-          <p style="font-size:24px; color:var(--muted); line-height:1.4">Готовый набор правил, который держит контекст задачи</p>
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 48px; border-left:1px solid var(--line)">
+          <p style="font-size:64px; font-weight:600; color:var(--accent)" class="display">02</p>
+          <h3 style="font-size:32px; font-weight:600; line-height:1.25">GitHub</h3>
         </div>
-        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 40px; border-left:1px solid var(--line)">
-          <p style="font-size:64px; font-weight:600; color:var(--accent)">03</p>
-          <h3 style="font-size:30px; font-weight:600; line-height:1.2">Figma MCP</h3>
-          <p style="font-size:24px; color:var(--muted); line-height:1.4">Мост, через который нейронка читает ваши макеты</p>
-        </div>
-        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 0 0 40px; border-left:1px solid var(--line)">
-          <p style="font-size:64px; font-weight:600; color:var(--accent)">04</p>
-          <h3 style="font-size:30px; font-weight:600; line-height:1.2">VS Code</h3>
-          <p style="font-size:24px; color:var(--muted); line-height:1.4">Файловый менеджер, куда подключаем Claude Code</p>
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 0 0 48px; border-left:1px solid var(--line)">
+          <p style="font-size:64px; font-weight:600; color:var(--accent)" class="display">03</p>
+          <h3 style="font-size:32px; font-weight:600; line-height:1.25">Pro или образовательный аккаунт в Figma</h3>
         </div>
       </div>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF">04</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">09</p>
     </section>
 
-    <!-- 5. subscription -->
-    <section class="slide" id="subscription" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:center; gap:40px">
-      <p style="font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--accent)">Что понадобится для вайбкодинга</p>
-      <h1 class="display" style="font-size:200px; font-weight:500; line-height:1">$20<span style="color:var(--muted); font-size:.5em"> / мес</span></h1>
-      <p style="font-size:32px; color:var(--muted); line-height:1.4">Базовой подписки хватает на вёрстку одного сайта в неделю. На два и более проекта уже не хватит.</p>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF">05</p>
+    <!-- 10. vscode -->
+    <section class="slide" id="vscode" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
+      <p class="eyebrow">Шаг 2 · Рабочая среда</p>
+      <h2 class="display" style="font-size:72px; font-weight:500; line-height:1.15">VS Code</h2>
+      <p style="font-size:32px; color:var(--muted); line-height:1.4">Самая популярная программа среди разработчиков — пишет код, управляет и показывает файлы любых расширений. Установим Claude Code внутрь неё как расширение: у самого приложения Claude Code нет файлового менеджера, поэтому работать так удобнее.</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">10</p>
     </section>
 
-    <!-- 6. skill -->
+    <!-- 11. github -->
+    <section class="slide" id="github" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:48px">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <p class="eyebrow">Шаг 2 · Рабочая среда</p>
+        <h2 class="display" style="font-size:60px; font-weight:500; line-height:1.15">GitHub</h2>
+      </div>
+      <p style="font-size:28px; color:var(--muted); line-height:1.4">Чтобы показать сайт заказчику, друзьям и знакомым — нужен сервер, на котором хранятся файлы сайта</p>
+      <div style="display:flex; gap:32px; flex:1">
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:44px; justify-content:center">
+          <h3 style="font-size:30px; font-weight:600">Локальный сервер</h3>
+          <p style="font-size:24px; color:var(--muted); line-height:1.4">Ваш компьютер. Через него нельзя поделиться сайтом с кем-то другим</p>
+        </div>
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; background:var(--accent-tint); border:1px solid #E5D2BE; border-radius:24px; padding:44px; justify-content:center">
+          <h3 style="font-size:30px; font-weight:600; color:var(--accent)">GitHub</h3>
+          <p style="font-size:24px; color:#5A3A28; line-height:1.4">Бесплатное удалённое хранилище — сайтом можно поделиться с кем угодно</p>
+        </div>
+      </div>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">11</p>
+    </section>
+
+    <!-- 12. figma connect -->
+    <section class="slide" id="figma-connect" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:32px">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <p class="eyebrow">Шаг 2 · Рабочая среда</p>
+        <h2 class="display" style="font-size:56px; font-weight:500; line-height:1.15">Подключение Figma к Claude Code</h2>
+      </div>
+      <p style="font-size:28px; color:var(--muted); line-height:1.4">Чтобы Claude Code дотянулся до макетов, нужен мост между ним и Figma — MCP (Model Context Protocol)</p>
+      <div style="position:relative; flex:1">
+        <div style="position:absolute; left:0px; top:60px; width:440px; height:180px; background:#fff; border:1px solid var(--line); border-radius:20px; display:flex; align-items:center; justify-content:center">
+          <h3 style="font-size:28px; font-weight:600; text-align:center">Claude Code</h3>
+        </div>
+        <div style="position:absolute; left:612px; top:60px; width:440px; height:180px; background:var(--accent-tint); border:1px solid #E5D2BE; border-radius:20px; display:flex; align-items:center; justify-content:center">
+          <h3 style="font-size:28px; font-weight:600; text-align:center; color:var(--accent)">MCP</h3>
+        </div>
+        <div style="position:absolute; left:1224px; top:60px; width:440px; height:180px; background:#fff; border:1px solid var(--line); border-radius:20px; display:flex; align-items:center; justify-content:center">
+          <h3 style="font-size:28px; font-weight:600; text-align:center">Figma</h3>
+        </div>
+        <svg style="position:absolute; left:440px; top:140px; width:172px; height:20px"><line x1="0" y1="10" x2="160" y2="10" stroke="#C2410C" stroke-width="3" marker-end="url(#arrow)"/></svg>
+        <svg style="position:absolute; left:1052px; top:140px; width:172px; height:20px"><line x1="0" y1="10" x2="160" y2="10" stroke="#C2410C" stroke-width="3" marker-end="url(#arrow)"/></svg>
+        <p style="position:absolute; left:0; top:290px; width:1664px; font-size:24px; color:var(--muted); line-height:1.4">Мост передаёт размеры, свойства и иерархию элементов — чтобы Claude Code смог сверстать макет</p>
+        <p style="position:absolute; left:0; bottom:0; width:1664px; font-size:22px; color:var(--accent); font-weight:600">Нужен Pro или Образовательный аккаунт в Figma — для режима разработчика</p>
+      </div>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">12</p>
+    </section>
+
+    <!-- 13. skill -->
     <section class="slide" id="skill" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:48px">
       <div style="display:flex; flex-direction:column; gap:16px">
-        <p style="font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--accent)">Что понадобится для вайбкодинга</p>
-        <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Скилл — инструкция для нейронки</h2>
+        <p class="eyebrow">Навык нейронки</p>
+        <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Скилл</h2>
       </div>
       <div style="display:flex; gap:48px; flex:1">
-        <ul style="flex:1; font-size:28px; color:#374151; line-height:2.1">
+        <ul style="flex:1; font-size:27px; color:#374151; line-height:2.0">
+          <li>Набор правил и инструкций, по которым нейронка выполняет задачу</li>
           <li>Экономит токены и память, не даёт нейронке отвлекаться на лишний анализ</li>
           <li>Держит контекст задачи — не нужно объяснять её заново каждый раз</li>
-          <li>Нужно тренировать: прогонять через реальные задачи и дорабатывать</li>
+          <li>Нужно постоянно прогонять через реальные задачи, чтобы дорабатывать и совершенствовать</li>
         </ul>
         <div style="flex:1; background:var(--accent-tint); border-radius:24px; padding:48px; display:flex; flex-direction:column; justify-content:center; gap:16px">
           <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 00-3 11c.6.5 1 1.2 1 2h4c0-.8.4-1.5 1-2a6 6 0 00-3-11z"/></svg>
-          <p style="font-size:32px; font-weight:600; line-height:1.3">На курсе дадим готовый скилл и покажем, как его подключить к Claude Code</p>
+          <p style="font-size:32px; font-weight:600; line-height:1.3">На курсе поделимся проработанным скиллом, который поможет Claude Code верстать ваши макеты</p>
         </div>
       </div>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF">06</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">13</p>
     </section>
 
-    <!-- 7. mcp bridge -->
-    <section class="slide" id="mcp-bridge" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:40px">
-      <div style="display:flex; flex-direction:column; gap:16px">
-        <p style="font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--accent)">Что понадобится для вайбкодинга</p>
-        <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Как Claude Code дотягивается до макетов</h2>
-      </div>
-      <p style="font-size:32px; color:var(--muted); line-height:1.4">MCP (Model Context Protocol) — мост, по которому нейронка подключается к внешним источникам данных, например к Figma</p>
-      <div style="position:relative; flex:1">
-        <div style="position:absolute; left:0px; top:100px; width:440px; height:200px; background:#fff; border:1px solid var(--line); border-radius:20px; display:flex; align-items:center; justify-content:center">
-          <h3 style="font-size:30px; font-weight:600; text-align:center">Claude Code</h3>
-        </div>
-        <div style="position:absolute; left:612px; top:100px; width:440px; height:200px; background:var(--accent-tint); border:1px solid #E5D2BE; border-radius:20px; display:flex; align-items:center; justify-content:center">
-          <h3 style="font-size:30px; font-weight:600; text-align:center; color:var(--accent)">MCP</h3>
-        </div>
-        <div style="position:absolute; left:1224px; top:100px; width:440px; height:200px; background:#fff; border:1px solid var(--line); border-radius:20px; display:flex; align-items:center; justify-content:center">
-          <h3 style="font-size:30px; font-weight:600; text-align:center">Figma</h3>
-        </div>
-        <svg style="position:absolute; left:440px; top:190px; width:172px; height:20px"><line x1="0" y1="10" x2="160" y2="10" stroke="#C2410C" stroke-width="3" marker-end="url(#arrow)"/></svg>
-        <svg style="position:absolute; left:1052px; top:190px; width:172px; height:20px"><line x1="0" y1="10" x2="160" y2="10" stroke="#C2410C" stroke-width="3" marker-end="url(#arrow)"/></svg>
-      </div>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF">07</p>
-    </section>
-
-    <!-- 8. servers -->
-    <section class="slide" id="servers" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:48px">
-      <div style="display:flex; flex-direction:column; gap:16px">
-        <p style="font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--accent)">Что понадобится для вайбкодинга</p>
-        <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Как мы увидим результат вёрстки</h2>
-      </div>
-      <div style="display:flex; gap:32px; flex:1">
-        <div style="flex:1; display:flex; flex-direction:column; gap:20px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:48px">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></svg>
-          <h3 style="font-size:34px; font-weight:600; line-height:1.2">Локальный сервер</h3>
-          <p style="font-size:26px; color:var(--muted); line-height:1.4">Разворачивается прямо на вашем компьютере (localhost). Быстро проверить результат — но не показать команде и клиенту</p>
-        </div>
-        <div style="flex:1; display:flex; flex-direction:column; gap:20px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:48px">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M6 17a4 4 0 01.9-7.9A5 5 0 0117 9a4 4 0 01-.5 8H7a3 3 0 01-1-7.1z"/></svg>
-          <h3 style="font-size:34px; font-weight:600; line-height:1.2">Удалённый сервер</h3>
-          <p style="font-size:26px; color:var(--muted); line-height:1.4">Например GitHub Pages — бесплатное хранилище, где можно опубликовать сайт для показа перед выходом на клиентский домен</p>
-        </div>
-      </div>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF">08</p>
-    </section>
-
-    <!-- 9. vscode -->
-    <section class="slide" id="vscode" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
-      <p style="font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--accent)">Что понадобится для вайбкодинга</p>
-      <h2 class="display" style="font-size:72px; font-weight:500; line-height:1.15">Где отдавать команды нейронке</h2>
-      <p style="font-size:32px; color:var(--muted); line-height:1.4">Обычное приложение Claude Code — не файловый менеджер. VS Code — самая популярная и бесплатная среда для разработчиков. Подключаем в неё Claude Code как расширение и работаем из одного окна.</p>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF">09</p>
-    </section>
-
-    <!-- 10. prep why -->
-    <section class="slide" id="prep-why" style="background:var(--dark); color:var(--dark-text); padding:128px 128px 160px; justify-content:space-between; gap:48px">
-      <p style="font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:#E07A44">Как готовить макеты к вайбкодингу</p>
+    <!-- 14. prep step 3 -->
+    <section class="slide" id="prep-step3" style="background:var(--dark); color:var(--dark-text); padding:128px 128px 160px; justify-content:space-between; gap:48px">
+      <p style="font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:#E07A44">Шаг 3 · Подготовка макетов</p>
       <h2 class="display" style="font-size:72px; font-weight:500; line-height:1.15; color:var(--dark-text)">В слоях макетов много мусора — и это путает ИИ-агента</h2>
-      <p style="font-size:32px; color:var(--dark-muted); line-height:1.4">Лишние вложенные контейнеры, беспорядочные имена слоёв — всё это нейронка вынуждена разгребать вместо того, чтобы верстать</p>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:var(--dark-line)">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:var(--dark-line)">10</p>
+      <p style="font-size:32px; color:var(--dark-muted); line-height:1.4">Лишние вложенные контейнеры, беспорядочные имена слоёв — всё это нужно убрать перед вёрсткой</p>
+      <p class="foot-left-dark">Figma to code · Вебинар 1</p>
+      <p class="foot-right-dark">14</p>
     </section>
 
-    <!-- 11. prep what helps -->
-    <section class="slide" id="prep-what-helps" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:48px">
-      <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Что поможет нейронке правильно сверстать макет</h2>
-      <div style="display:flex; flex-direction:column; gap:32px; flex:1">
-        <div style="display:flex; gap:32px; flex:1">
-          <div style="flex:1; display:flex; flex-direction:column; gap:12px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:40px; justify-content:center">
-            <p style="font-size:24px; font-weight:600; color:var(--accent)">A</p>
-            <h3 style="font-size:28px; font-weight:600; line-height:1.3">Текстовые стили, цветовые переменные и переменные для размеров и отступов</h3>
-          </div>
-          <div style="flex:1; display:flex; flex-direction:column; gap:12px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:40px; justify-content:center">
-            <p style="font-size:24px; font-weight:600; color:var(--accent)">B</p>
-            <h3 style="font-size:28px; font-weight:600; line-height:1.3">Компоненты интерактивных элементов</h3>
-          </div>
+    <!-- 15. auto layout -->
+    <section class="slide" id="auto-layout" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
+      <p class="eyebrow">Шаг 3 · Подготовка макетов</p>
+      <p class="badge">1 / 4</p>
+      <h2 class="display" style="font-size:76px; font-weight:500; line-height:1.15">Автолэйауты</h2>
+      <p style="font-size:32px; color:var(--muted); line-height:1.4">Claude Code плохо работает с фреймами. Ему легче считать позиционирование элементов, когда они лежат внутри автолэйаута.</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">15</p>
+    </section>
+
+    <!-- 16. components -->
+    <section class="slide" id="components" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
+      <p class="eyebrow">Шаг 3 · Подготовка макетов</p>
+      <p class="badge">2 / 4</p>
+      <h2 class="display" style="font-size:68px; font-weight:500; line-height:1.15">Компоненты интерактивных элементов</h2>
+      <p style="font-size:32px; color:var(--muted); line-height:1.4">Claude Code прекрасно считывает компоненты и варианты — и видит анимацию между ними.</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">16</p>
+    </section>
+
+    <!-- 17. styles variables -->
+    <section class="slide" id="styles-variables" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
+      <p class="eyebrow">Шаг 3 · Подготовка макетов</p>
+      <p class="badge">3 / 4</p>
+      <h2 class="display" style="font-size:60px; font-weight:500; line-height:1.15">Текстовые стили, цветовые переменные и переменные для размеров и отступов</h2>
+      <p style="font-size:32px; color:var(--muted); line-height:1.4">Чем больше вы используете переменные и стили в макетах, тем точнее получится вёрстка.</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">17</p>
+    </section>
+
+    <!-- 18. naming -->
+    <section class="slide" id="naming" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
+      <p class="eyebrow">Шаг 3 · Подготовка макетов</p>
+      <p class="badge">4 / 4</p>
+      <h2 class="display" style="font-size:72px; font-weight:500; line-height:1.15">Система нейминга слоёв</h2>
+      <p style="font-size:32px; color:var(--muted); line-height:1.4">Благодаря системному неймингу элементов вы всегда сможете донести до нейронки правки — быстро и просто.</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">18</p>
+    </section>
+
+    <!-- 19. animations step 4 -->
+    <section class="slide" id="animations-step4" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:56px">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <p class="eyebrow">Шаг 4 · Подготовка анимаций</p>
+        <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Три шага для анимации</h2>
+      </div>
+      <div style="display:flex; flex:1">
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 48px 0 0">
+          <p style="font-size:64px; font-weight:600; color:var(--accent)" class="display">01</p>
+          <h3 style="font-size:32px; font-weight:600; line-height:1.25">Раскадровка анимации</h3>
         </div>
-        <div style="display:flex; gap:32px; flex:1">
-          <div style="flex:1; display:flex; flex-direction:column; gap:12px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:40px; justify-content:center">
-            <p style="font-size:24px; font-weight:600; color:var(--accent)">C</p>
-            <h3 style="font-size:28px; font-weight:600; line-height:1.3">Автолэйауты везде, где только возможно</h3>
-          </div>
-          <div style="flex:1; display:flex; flex-direction:column; gap:12px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:40px; justify-content:center">
-            <p style="font-size:24px; font-weight:600; color:var(--accent)">D</p>
-            <h3 style="font-size:28px; font-weight:600; line-height:1.3">Система нейминга слоёв</h3>
-          </div>
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 48px; border-left:1px solid var(--line)">
+          <p style="font-size:64px; font-weight:600; color:var(--accent)" class="display">02</p>
+          <h3 style="font-size:32px; font-weight:600; line-height:1.25">Подробный промт</h3>
+        </div>
+        <div style="flex:1; display:flex; flex-direction:column; gap:16px; padding:0 0 0 48px; border-left:1px solid var(--line)">
+          <p style="font-size:64px; font-weight:600; color:var(--accent)" class="display">03</p>
+          <h3 style="font-size:32px; font-weight:600; line-height:1.25">Правки</h3>
         </div>
       </div>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF">11</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">19</p>
     </section>
 
-    <!-- 12. animations -->
-    <section class="slide" id="animations" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:56px">
-      <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Как объяснить нейронке анимации</h2>
-      <div style="position:relative; flex:1">
-        <div style="position:absolute; left:0px; top:60px; width:480px; height:520px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:40px; display:flex; flex-direction:column; gap:16px">
-          <p style="font-size:56px; font-weight:600; color:var(--accent)">01</p>
-          <h3 style="font-size:30px; font-weight:600; line-height:1.25">Раскадровка секции</h3>
-          <p style="font-size:23px; color:var(--muted); line-height:1.4">Копируем секцию на количество этапов анимации, в каждом готовим своё состояние</p>
-        </div>
-        <div style="position:absolute; left:592px; top:60px; width:480px; height:520px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:40px; display:flex; flex-direction:column; gap:16px">
-          <p style="font-size:56px; font-weight:600; color:var(--accent)">02</p>
-          <h3 style="font-size:30px; font-weight:600; line-height:1.25">Подробный промт</h3>
-          <p style="font-size:23px; color:var(--muted); line-height:1.4">Пошагово описываем, что движется первым, что вторым — чем лучше «разжевали», тем точнее результат</p>
-        </div>
-        <div style="position:absolute; left:1184px; top:60px; width:480px; height:520px; background:#fff; border:1px solid var(--line); border-radius:24px; padding:40px; display:flex; flex-direction:column; gap:16px">
-          <p style="font-size:56px; font-weight:600; color:var(--accent)">03</p>
-          <h3 style="font-size:30px; font-weight:600; line-height:1.25">Смотрим и дорабатываем</h3>
-          <p style="font-size:23px; color:var(--muted); line-height:1.4">Пишем точечные правки, пока не добьёмся нужного результата</p>
-        </div>
-        <svg style="position:absolute; left:480px; top:310px; width:112px; height:20px"><line x1="0" y1="10" x2="100" y2="10" stroke="#C2410C" stroke-width="3" marker-end="url(#arrow)"/></svg>
-        <svg style="position:absolute; left:1072px; top:310px; width:112px; height:20px"><line x1="0" y1="10" x2="100" y2="10" stroke="#C2410C" stroke-width="3" marker-end="url(#arrow)"/></svg>
-      </div>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF">12</p>
+    <!-- 20. storyboard -->
+    <section class="slide" id="storyboard" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
+      <p class="eyebrow">Шаг 4 · Подготовка анимаций</p>
+      <p class="badge">1 / 3</p>
+      <h2 class="display" style="font-size:68px; font-weight:500; line-height:1.15">Раскадровка анимации секции</h2>
+      <p style="font-size:32px; color:var(--muted); line-height:1.4">Берём секцию и копируем её на количество этапов анимации — в каждом этапе готовим своё состояние элементов.</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">20</p>
     </section>
 
-    <!-- 13. program -->
+    <!-- 21. prompt -->
+    <section class="slide" id="prompt" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
+      <p class="eyebrow">Шаг 4 · Подготовка анимаций</p>
+      <p class="badge">2 / 3</p>
+      <h2 class="display" style="font-size:72px; font-weight:500; line-height:1.15">Пишем подробный промт</h2>
+      <p style="font-size:32px; color:var(--muted); line-height:1.4">Пошагово описываем изменение секции: что анимируется первым, что вторым, что третьим. Чем лучше «разжуём», тем точнее нейронка соберёт анимацию.</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">21</p>
+    </section>
+
+    <!-- 22. review fix -->
+    <section class="slide" id="review-fix" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; justify-content:space-between; gap:48px">
+      <p class="eyebrow">Шаг 4 · Подготовка анимаций</p>
+      <p class="badge">3 / 3</p>
+      <h2 class="display" style="font-size:72px; font-weight:500; line-height:1.15">Смотрим результат и дорабатываем</h2>
+      <p style="font-size:32px; color:var(--muted); line-height:1.4">С первого раза обычно не получается так, как нужно. Описываем правки, пока нейронка не сделает всё правильно.</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">22</p>
+    </section>
+
+    <!-- 23. program -->
     <section class="slide" id="program" style="background:var(--paper); color:var(--ink); padding:128px 128px 160px; gap:48px">
       <h2 class="display" style="font-size:64px; font-weight:500; line-height:1.1">Программа курса</h2>
-      <table style="font-size:28px">
+      <table style="font-size:27px">
         <tr><th style="width:38%; color:var(--accent)">Модуль</th><th style="width:62%; color:var(--muted)">Что делаем</th></tr>
         <tr><td style="font-weight:600">Основы вёрстки</td><td style="color:var(--muted)">HTML, CSS, JS и как технически устроен сайт</td></tr>
         <tr><td style="font-weight:600">Настройка рабочей среды</td><td style="color:var(--muted)">Claude, VS Code, Claude Code, скилл, Figma MCP, GitHub</td></tr>
         <tr><td style="font-weight:600">Подготовка макетов к вёрстке</td><td style="color:var(--muted)">UI-kit, чистка слоёв, нейминг, адаптив</td></tr>
         <tr><td style="font-weight:600">Раскадровка анимаций</td><td style="color:var(--muted)">Ключевые состояния секций, промт анимации</td></tr>
         <tr><td style="font-weight:600">Вёрстка сайта</td><td style="color:var(--muted)">Проект, макеты — ИИ-агенту, вносим правки</td></tr>
-        <tr><td style="font-weight:600; border-bottom:none">Оптимизация и деплой</td><td style="color:var(--muted); border-bottom:none">Базовое SEO, публикация на сервере</td></tr>
+        <tr><td style="font-weight:600; border-bottom:none">Оптимизация и публикация</td><td style="color:var(--muted); border-bottom:none">Оптимизируем сайт, базовое SEO, публикуем на сервере</td></tr>
       </table>
-      <p style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#9CA3AF">Figma to code · Вебинар 1</p>
-      <p style="position:absolute; right:128px; bottom:64px; font-size:24px; color:#9CA3AF">13</p>
+      <p class="foot-left">Figma to code · Вебинар 1</p>
+      <p class="foot-right">23</p>
     </section>
 
-    <!-- 14. closing -->
+    <!-- 24. closing -->
     <section class="slide" id="closing" style="background:var(--dark); color:var(--dark-text); padding:128px; justify-content:space-between">
       <p style="font-size:24px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:#E07A44">Курс «Figma to code»</p>
       <h1 class="display" style="font-size:104px; font-weight:500; line-height:1.05; color:var(--dark-text)">Вопросы?</h1>
@@ -304,27 +433,37 @@
 <div class="hint">← → пролистать · S заметки · Esc/F полный экран</div>
 <div class="nav">
   <button id="prevBtn" aria-label="Назад">‹</button>
-  <span class="counter" id="counter">1 / 14</span>
+  <span class="counter" id="counter">1 / 24</span>
   <button id="nextBtn" aria-label="Вперёд">›</button>
 </div>
 <div class="notes-panel" id="notesPanel"><b>Заметки:</b> <span id="notesText"></span></div>
 
 <script>
   const notes = {
-    "cover": "Приветствие. Коротко представиться и обозначить формат: сегодня — про Claude Code, что нужно для старта, подготовку макетов и программу курса.",
-    "what-is-claude-code": "Главная идея слайда: Claude Code — это не чат-бот, а агент, который сам читает проект и меняет файлы. Это база для всего остального разговора.",
-    "how-different": "Три отличия от обычного чата: видит весь проект, умеет подключаться к внешним сервисам через MCP, и всегда спрашивает разрешение перед действием — это не автопилот без контроля.",
-    "need-overview": "Обзорный слайд-оглавление этого раздела. Дальше — по каждому пункту отдельно.",
-    "subscription": "Подписка на Claude Code — базовая, $20/мес. Хватает ровно на один проект в неделю, это важно проговорить сразу, чтобы не было завышенных ожиданий.",
-    "skill": "Скилл — не абстракция, а конкретный набор правил, который экономит токены и держит контекст. На курсе даём готовый.",
-    "mcp-bridge": "Мы соединяем нейронку с аккаунтом в Figma, выделяем нужные макеты и отдаём их на изучение. Нейронка читает размеры, отступы, переменные, стили и переносит всё в код.",
-    "servers": "Два вида серверов: локальный (быстро, только для вас) и удалённый (GitHub Pages — бесплатно, видно команде и клиенту).",
-    "vscode": "Файлы проекта должны быть под рукой. VS Code даёт это, Claude Code сам по себе — нет.",
-    "prep-why": "Переходный акцентный слайд к новому разделу. Проблема, которую решает следующий слайд.",
-    "prep-what-helps": "Четыре вещи, которые чистят макет для нейронки — их подробно разберём на модуле «Подготовка макетов».",
-    "animations": "Три шага: раскадровка состояний секции, подробный текстовый промт, итеративная доработка.",
-    "program": "Шесть модулей курса — от основ вёрстки до деплоя на сервер.",
-    "closing": "Финальный слайд. Открыть чат/эфир для вопросов, напомнить про домашнее задание и дату следующего вебинара."
+    "cover": "Приветствие. Обозначить формат: сегодня — пошаговый алгоритм вёрстки макетов в Claude Code.",
+    "about-me": "9 лет в дизайне, 6+ лет продуктовый дизайнер в Альфа-Банке. Раньше верстал на Webflow и Taptop, теперь — без кода.",
+    "what-you-get": "На этой лекции — пошаговый алгоритм, как верстать макеты в Claude Code.",
+    "lecture-plan": "Разберём основные шаги, терминологию, подготовку макетов и анимации. По итогу — полный гайд.",
+    "what-is-claude-code": "Claude Code — ассистент, мозги и руки. Работает с файлами проекта: создаёт, редактирует, удаляет, переносит.",
+    "why-claude-code": "Обычный чат не держит контекст долго и требует ручной загрузки файлов. Claude Code сам видит папку проекта и умеет интегрироваться с сервисами через MCP.",
+    "subscription-step1": "$20/мес — один сайт в неделю. $100/мес — x20 токенов, для более глубокой разработки (сервисы, приложения).",
+    "subscription-limits": "5-часовой и недельный лимиты токенов. Потратили раньше времени — ждёте обновления. Подробнее про управление токенами — на курсе.",
+    "setup-step2": "Три вещи для настройки среды: VS Code, GitHub, Pro/образовательный аккаунт в Figma.",
+    "vscode": "VS Code — файловый менеджер и редактор кода. Claude Code подключается туда как расширение.",
+    "github": "Локальный сервер — только для вас. GitHub — бесплатный удалённый сервер, чтобы поделиться сайтом.",
+    "figma-connect": "MCP — мост между Claude Code и Figma. Нужен Pro или образовательный аккаунт для режима разработчика.",
+    "skill": "Скилл — набор правил для нейронки. Экономит токены, держит контекст. На курсе дадим готовый.",
+    "prep-step3": "Переходный акцентный слайд к разделу подготовки макетов. Мусор в слоях путает агента.",
+    "auto-layout": "Claude Code плохо считает позиционирование во фреймах — используйте автолэйауты.",
+    "components": "Компоненты и варианты Claude Code считывает отлично, включая анимацию между вариантами.",
+    "styles-variables": "Чем больше переменных и стилей в макете, тем точнее вёрстка.",
+    "naming": "Системный нейминг слоёв — быстрее и проще доносить правки до нейронки.",
+    "animations-step4": "Три шага: раскадровка состояний секции, подробный текстовый промт, доработка по правкам.",
+    "storyboard": "Копируем секцию на количество этапов анимации, в каждом — своё состояние элементов.",
+    "prompt": "Подробно расписываем порядок анимации элементов — чем детальнее, тем точнее результат.",
+    "review-fix": "С первого раза редко получается идеально — донастраиваем через точечные правки.",
+    "program": "Шесть модулей курса — от основ вёрстки до публикации на сервере.",
+    "closing": "Финальный слайд. Открыть чат/эфир для вопросов, напомнить про следующий вебинар."
   };
 
   const slides = Array.from(document.querySelectorAll('.slide'));
